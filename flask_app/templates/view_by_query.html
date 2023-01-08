@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h4>Enter Name to find Document</h4>
+<form action="#" method="post">
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name">
+    <br>
+    <button type="submit">Submit</button>
+</form>
+{% if result %}
+<p>{{ result }}</p>
+{% endif %}
+<a href="/insert">Go to Insert Page</a>
+<br>
+<a href="/view">Go to View Page</a>
+{% endblock %}

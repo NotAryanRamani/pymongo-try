@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h4>All documents</h4>
+<form action="#" method="post">
+    <button type="submit">Get Documents</button>
+</form>
+<br>
+{% if documents %}
+{% for document in documents %}
+<p>{{ document }}</p>
+<br>
+{% endfor %}
+{% endif %}
+
+<a href="/insert">Go to Insert Page</a>
+<br>
+<a href="/view_by_query">Go to View By Query Page</a>
+
+{% endblock %}

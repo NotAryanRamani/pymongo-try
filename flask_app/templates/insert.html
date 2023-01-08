@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h4>Enter following information</h4>
+    <form action="#" method="post">
+        <label for="name">Name: </label>
+        <input type='text' name="name" id="name">
+        <br>
+        <label for="age">Age: </label>
+        <input type="text" name="age" id="age">
+        <br>
+        <button type="submit">Submit</button> 
+    </form>
+    {% for msg in get_flashed_messages() %}
+    <p>{{ msg }}</p>
+    {% endfor %}
+    <a href="/view">Go to View Page</a>
+    <br>
+    <a href="/view_by_query">Go to View By Query Page</a>
+{% endblock %}
